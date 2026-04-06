@@ -277,10 +277,10 @@ function downloadAPK() {
         'success'
     );
     
-    // Create a download link for the APK file
+    // Create a download link for the APK file from GitHub
     const link = document.createElement('a');
-    link.href = 'smartsensrty.apk';
-    link.download = 'smartsensrty-v2.1.0.apk';
+    link.href = 'https://raw.githubusercontent.com/sriinathh/smartsensrty-app/main/SmartSensrty.apk';
+    link.download = 'SmartSensrty-v2.1.0.apk';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -293,7 +293,7 @@ function downloadAPK() {
 }
 
 function copyDownloadLink() {
-    const downloadUrl = window.location.origin + window.location.pathname.replace('index.html', '') + 'smartsensrty.apk';
+    const downloadUrl = 'https://raw.githubusercontent.com/sriinathh/smartsensrty-app/main/SmartSensrty.apk';
     
     navigator.clipboard.writeText(downloadUrl).then(() => {
         showAlert(
