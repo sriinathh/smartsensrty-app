@@ -11,6 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
         loader.classList.remove('active');
     }, 1000);
 
+    // Initialize AOS (Animate On Scroll)
+    initAOS();
+    
     // Initialize all functionality
     initNavigation();
     initCarousel();
@@ -20,7 +23,89 @@ document.addEventListener('DOMContentLoaded', () => {
     initDownloadButtons();
     initStatusCard();
     initProtectionCards();
+    generateParticles();
+    initPremiumEffects();
 });
+
+// ===========================
+// AOS INITIALIZATION
+// ===========================
+
+function initAOS() {
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 800,
+            once: false,
+            offset: 100,
+            easing: 'ease-in-out',
+            delay: 0
+        });
+    }
+}
+
+// ===========================
+// PARTICLE GENERATION
+// ===========================
+
+function generateParticles() {
+    const particlesContainer = document.querySelector('.particles-container') || createParticlesContainer();
+    const particleCount = window.innerWidth > 768 ? 50 : 20;
+    
+    for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.classList.add('particle');
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.animationDelay = Math.random() * 5 + 's';
+        particle.style.animationDuration = (Math.random() * 8 + 10) + 's';
+        particle.style.animation = `particleFloat ${particle.style.animationDuration.replace('s', '')}s linear ${particle.style.animationDelay.replace('s', '')}s infinite`;
+        particlesContainer.appendChild(particle);
+    }
+}
+
+function createParticlesContainer() {
+    const container = document.createElement('div');
+    container.classList.add('particles-container');
+    document.body.insertBefore(container, document.body.firstChild);
+    return container;
+}
+
+// ===========================
+// PREMIUM EFFECTS INITIALIZATION
+// ===========================
+
+function initPremiumEffects() {
+    // Enhanced navbar scroll effect
+    let lastScroll = 0;
+    const navbar = document.querySelector('.navbar');
+    
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        
+        if (currentScroll > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+        
+        lastScroll = currentScroll;
+    });
+
+    // Add glow effect to hero elements on scroll
+    const heroSection = document.querySelector('.hero');
+    if (heroSection) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const phoneImage = entry.target.querySelector('.hero-image');
+                    if (phoneImage) {
+                        phoneImage.style.animation = 'float 6s ease-in-out infinite';
+                    }
+                }
+            });
+        });
+        observer.observe(heroSection);
+    }
+}
 
 // ===========================
 // NAVIGATION & MENU TOGGLE
@@ -32,7 +117,8 @@ function initNavigation() {
     const navLinks = document.querySelectorAll('.nav-link');
 
     // Toggle mobile menu
-    menuToggle.addEventListener('click', () => {
+    menuToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
         navMenu.classList.toggle('active');
         menuToggle.classList.toggle('active');
     });
@@ -53,20 +139,10 @@ function initNavigation() {
         }
     });
 
-    // Navbar scroll effect
-    let lastScroll = 0;
-    const navbar = document.querySelector('.navbar');
-
+    // Close menu on scroll
     window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-        
-        if (currentScroll <= 0) {
-            navbar.style.background = 'rgba(10, 25, 41, 0.8)';
-        } else {
-            navbar.style.background = 'rgba(10, 25, 41, 0.95)';
-        }
-        
-        lastScroll = currentScroll;
+        navMenu.classList.remove('active');
+        menuToggle.classList.remove('active');
     });
 }
 

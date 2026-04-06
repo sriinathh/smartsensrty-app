@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <!-- Floating Animated Background -->
@@ -228,51 +229,169 @@
             </h2>
             <div class="carousel-container" data-aos="zoom-in" data-aos-delay="100">
                 <div class="carousel">
+                    <!-- Login Screen Slide -->
                     <div class="carousel-slide active">
                         <div class="demo-mockup">
-                            <div class="demo-screen">
+                            <div class="demo-screen login-screen">
                                 <div class="demo-header">
-                                    <h3>Login Screen</h3>
+                                    <h3>Secure Login</h3>
                                 </div>
                                 <div class="demo-content">
-                                    <div class="demo-input"></div>
-                                    <div class="demo-input"></div>
-                                    <div class="demo-button"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-slide">
-                        <div class="demo-mockup">
-                            <div class="demo-screen">
-                                <div class="demo-header">Dashboard</div>
-                                <div class="demo-content">
-                                    <div class="demo-item"></div>
-                                    <div class="demo-item"></div>
-                                    <div class="demo-item"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-slide">
-                        <div class="demo-mockup">
-                            <div class="demo-screen">
-                                <div class="demo-header">SOS Alert</div>
-                                <div class="demo-content" style="background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);">
-                                    <div style="text-align: center; color: white; padding: 20px;">
-                                        <i class="fas fa-exclamation-circle" style="font-size: 40px; margin-bottom: 10px;"></i>
-                                        <p>Alert Sent!</p>
+                                    <div class="login-form">
+                                        <div class="form-group">
+                                            <div class="input-label">Phone Number</div>
+                                            <div class="input-field">
+                                                <i class="fas fa-phone"></i>
+                                                <span>+91 XXXXXXXXXX</span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-label">Password</div>
+                                            <div class="input-field">
+                                                <i class="fas fa-lock"></i>
+                                                <span>••••••••</span>
+                                            </div>
+                                        </div>
+                                        <div class="login-button">
+                                            <i class="fas fa-sign-in-alt"></i> Login
+                                        </div>
+                                        <div class="social-login">
+                                            <div class="social-icon">
+                                                <i class="fab fa-google"></i>
+                                            </div>
+                                            <div class="social-icon">
+                                                <i class="fab fa-facebook"></i>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    <!-- Dashboard Slide -->
                     <div class="carousel-slide">
                         <div class="demo-mockup">
-                            <div class="demo-screen">
-                                <div class="demo-header">GPS Tracking</div>
+                            <div class="demo-screen dashboard-screen">
+                                <div class="demo-header">
+                                    <h3>Dashboard</h3>
+                                    <div class="header-icon">
+                                        <i class="fas fa-bell"></i>
+                                    </div>
+                                </div>
                                 <div class="demo-content">
-                                    <div class="demo-map"></div>
+                                    <div class="dashboard-grid">
+                                        <div class="dash-card status-card-dash">
+                                            <div class="card-icon safe">
+                                                <i class="fas fa-shield-alt"></i>
+                                            </div>
+                                            <div class="card-text">
+                                                <span class="label">Status</span>
+                                                <span class="value">Safe</span>
+                                            </div>
+                                        </div>
+                                        <div class="dash-card location-card-dash">
+                                            <div class="card-icon">
+                                                <i class="fas fa-map-pin"></i>
+                                            </div>
+                                            <div class="card-text">
+                                                <span class="label">Location</span>
+                                                <span class="value">Active</span>
+                                            </div>
+                                        </div>
+                                        <div class="dash-card contacts-card-dash">
+                                            <div class="card-icon">
+                                                <i class="fas fa-users"></i>
+                                            </div>
+                                            <div class="card-text">
+                                                <span class="label">Contacts</span>
+                                                <span class="value">12</span>
+                                            </div>
+                                        </div>
+                                        <div class="dash-card stats-card-dash">
+                                            <div class="card-icon">
+                                                <i class="fas fa-activity"></i>
+                                            </div>
+                                            <div class="card-text">
+                                                <span class="label">Activity</span>
+                                                <span class="value">Online</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dashboard-actions">
+                                        <div class="action-btn">
+                                            <i class="fas fa-edit"></i>
+                                        </div>
+                                        <div class="action-btn">
+                                            <i class="fas fa-cog"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SOS Alert Slide -->
+                    <div class="carousel-slide">
+                        <div class="demo-mockup">
+                            <div class="demo-screen sos-screen">
+                                <div class="demo-header sos-header">
+                                    <h3>Emergency Alert</h3>
+                                </div>
+                                <div class="demo-content sos-content">
+                                    <div class="alert-animation">
+                                        <div class="alert-circle-1"></div>
+                                        <div class="alert-circle-2"></div>
+                                        <div class="alert-circle-3"></div>
+                                        <div class="alert-icon">
+                                            <i class="fas fa-exclamation-circle"></i>
+                                        </div>
+                                    </div>
+                                    <div class="alert-text">
+                                        <h3>ALERT SENT!</h3>
+                                        <p>Notifying emergency contacts...</p>
+                                        <div class="alert-contacts">
+                                            <div class="contact">Mom</div>
+                                            <div class="contact">Police</div>
+                                            <div class="contact">Hospital</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- GPS Tracking Slide -->
+                    <div class="carousel-slide">
+                        <div class="demo-mockup">
+                            <div class="demo-screen gps-screen">
+                                <div class="demo-header">
+                                    <h3>Live GPS Tracking</h3>
+                                </div>
+                                <div class="demo-content gps-content">
+                                    <div class="map-container">
+                                        <div class="map-grid"></div>
+                                        <div class="location-marker">
+                                            <div class="marker-pulse"></div>
+                                            <div class="marker-dot"></div>
+                                        </div>
+                                        <div class="destination-marker">
+                                            <div class="dest-icon">
+                                                <i class="fas fa-hospital"></i>
+                                            </div>
+                                        </div>
+                                        <div class="route-line"></div>
+                                    </div>
+                                    <div class="gps-info">
+                                        <div class="info-item">
+                                            <span class="info-label">Distance</span>
+                                            <span class="info-value">2.5 km</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <span class="info-label">ETA</span>
+                                            <span class="info-value">8 min</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -877,5 +996,6 @@
 
     <script src="script.js"></script>
     <script src="share-functions.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 </body>
 </html>
