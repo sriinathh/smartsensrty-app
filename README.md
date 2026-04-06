@@ -270,7 +270,24 @@ Accent Colors:     Pink, Orange, Purple, Blue
 - Check media query breakpoints
 - Clear CSS cache
 
-## 🚀 Deployment
+## � Download & Installation
+
+### Download from GitHub:
+```bash
+git clone https://github.com/sriinathh/smartsensrty-app.git
+cd smartsensrty-app
+```
+
+### Or Download as ZIP:
+- Visit: https://github.com/sriinathh/smartsensrty-app
+- Click **Code** → **Download ZIP**
+- Extract and open `index.html` in your browser
+
+### Live Demo:
+- **Website**: https://smartsensrty-app.vercel.app/
+- **GitHub Repository**: https://github.com/sriinathh/smartsensrty-app
+
+## �🚀 Deployment
 
 ### To Deploy Online:
 
