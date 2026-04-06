@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartSensrty - Your Safety, Our Priority</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Floating Animated Background -->
+    <div class="animated-background">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-shield-heartbeat"></i>
+                <span>SmartSensrty</span>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#location" class="nav-link">Location</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#protection" class="nav-link">Protection</a></li>
+                <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+                <li><a href="#download" class="nav-link">Download</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Floating SOS Button -->
+    <button class="floating-sos" id="floatingSOS">
+        <i class="fas fa-phone"></i>
+        <span>SOS</span>
+    </button>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title" data-aos="fade-up">
+                    Your Safety,
+                    <span class="gradient-text">Our Priority</span>
+                </h1>
+                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="100">
+                    Real-time emergency response and safety management system with GPS tracking and instant alerts
+                </p>
+                
+                <!-- Status Card -->
+                <div class="status-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="status-indicator safe">
+                        <div class="status-dot"></div>
+                    </div>
+                    <div class="status-info">
+                        <p class="status-label">You are currently</p>
+                        <h3 class="status-value">Safe</h3>
+                    </div>
+                    <div class="status-features">
+                        <span class="feature-tag">✓ Shake Detect</span>
+                        <span class="feature-tag">✓ Accident Alert</span>
+                        <span class="feature-tag">✓ Medical Shield</span>
+                    </div>
+                </div>
+
+                <div class="hero-buttons" data-aos="fade-up" data-aos-delay="200">
+                    <button class="btn btn-primary" id="downloadBtn">
+                        <i class="fas fa-download"></i> Download APK
+                    </button>
+                    <button class="btn btn-secondary" id="featuresBtn">
+                        <i class="fas fa-star"></i> View Features
+                    </button>
+                </div>
+            </div>
+            <div class="hero-image" data-aos="zoom-in" data-aos-delay="300">
+                <div class="phone-mockup">
+                    <div class="phone-frame">
+                        <div class="phone-screen">
+                            <img src="https://res.cloudinary.com/notes1/image/upload/WhatsApp_Image_2026-04-05_at_22.00.12_gwjcfv.jpg" alt="SmartSensrty App Screenshot" class="screen-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & GPS Section -->
+    <section id="location" class="location-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                <i class="fas fa-map-location-dot"></i> Location & GPS
+                <span class="gradient-text">Tracking</span>
+            </h2>
+            <div class="location-grid" data-aos="zoom-in" data-aos-delay="100">
+                <div class="location-card current">
+                    <div class="location-icon">
+                        <i class="fas fa-map-pin"></i>
+                    </div>
+                    <h3>Current Location</h3>
+                    <p class="location-name">Gummadidala</p>
+                    <p class="location-time">Updated: 2:06:32 pm</p>
+                    <div class="location-map"></div>
+                </div>
+                
+                <div class="location-card trusted">
+                    <div class="location-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Trusted Zones</h3>
+                    <p class="zone-count">3 Safe Zones</p>
+                    <ul class="zones-list">
+                        <li><i class="fas fa-check-circle"></i> Home</li>
+                        <li><i class="fas fa-check-circle"></i> Office</li>
+                        <li><i class="fas fa-check-circle"></i> School</li>
+                    </ul>
+                </div>
+
+                <div class="location-card sharing">
+                    <div class="location-icon">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <h3>Location Sharing</h3>
+                    <p class="sharing-status">12 Contacts Active</p>
+                    <div class="contact-avatars">
+                        <div class="avatar">M</div>
+                        <div class="avatar">D</div>
+                        <div class="avatar">R</div>
+                        <div class="avatar">+9</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                Powerful <span class="gradient-text">Safety Features</span>
+            </h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                Everything you need for complete emergency peace of mind
+            </p>
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>One-Tap SOS</h3>
+                    <p>Instant emergency alert with a single tap</p>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-map-location-dot"></i>
+                    </div>
+                    <h3>Real-Time GPS Tracking</h3>
+                    <p>Live location sharing with trusted contacts</p>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h3>Emergency Contacts Alert</h3>
+                    <p>Automatically notify your emergency contacts</p>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Fake Call Feature</h3>
+                    <p>Escape difficult situations with fake call alerts</p>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield"></i>
+                    </div>
+                    <h3>Background SOS Monitoring</h3>
+                    <p>24/7 monitoring even when app is closed</p>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Medical Profile Storage</h3>
+                    <p>Store critical health information for emergencies</p>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Volunteer Network</h3>
+                    <p>Connect with trained safety volunteers nearby</p>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="700">
+                    <div class="feature-icon">
+                        <i class="fas fa-building-shield"></i>
+                    </div>
+                    <h3>Disaster Management</h3>
+                    <p>Integrated disaster response and coordination</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Demo Section -->
+    <section id="demo" class="demo">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                See SmartSensrty in <span class="gradient-text">Action</span>
+            </h2>
+            <div class="carousel-container" data-aos="zoom-in" data-aos-delay="100">
+                <div class="carousel">
+                    <div class="carousel-slide active">
+                        <div class="demo-mockup">
+                            <div class="demo-screen">
+                                <div class="demo-header">
+                                    <h3>Login Screen</h3>
+                                </div>
+                                <div class="demo-content">
+                                    <div class="demo-input"></div>
+                                    <div class="demo-input"></div>
+                                    <div class="demo-button"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="demo-mockup">
+                            <div class="demo-screen">
+                                <div class="demo-header">Dashboard</div>
+                                <div class="demo-content">
+                                    <div class="demo-item"></div>
+                                    <div class="demo-item"></div>
+                                    <div class="demo-item"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="demo-mockup">
+                            <div class="demo-screen">
+                                <div class="demo-header">SOS Alert</div>
+                                <div class="demo-content" style="background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);">
+                                    <div style="text-align: center; color: white; padding: 20px;">
+                                        <i class="fas fa-exclamation-circle" style="font-size: 40px; margin-bottom: 10px;"></i>
+                                        <p>Alert Sent!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="demo-mockup">
+                            <div class="demo-screen">
+                                <div class="demo-header">GPS Tracking</div>
+                                <div class="demo-content">
+                                    <div class="demo-map"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-prev" id="prevSlide"><i class="fas fa-chevron-left"></i></button>
+                <button class="carousel-next" id="nextSlide"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="carousel-dots" id="carouselDots"></div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                How It <span class="gradient-text">Works</span>
+            </h2>
+            <div class="steps-container">
+                <div class="step" data-aos="fade-right">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Open App</h3>
+                        <p>Launch SmartSensrty and authenticate with your credentials</p>
+                    </div>
+                </div>
+
+                <div class="step-connector"></div>
+
+                <div class="step" data-aos="fade-right" data-aos-delay="100">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Tap SOS</h3>
+                        <p>Press the emergency button when you need immediate help</p>
+                    </div>
+                </div>
+
+                <div class="step-connector"></div>
+
+                <div class="step" data-aos="fade-right" data-aos-delay="200">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Share Location</h3>
+                        <p>Your real-time GPS location is instantly shared with contacts</p>
+                    </div>
+                </div>
+
+                <div class="step-connector"></div>
+
+                <div class="step" data-aos="fade-right" data-aos-delay="300">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Get Help</h3>
+                        <p>Emergency responders and contacts rush to your assistance</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Services Section -->
+    <section id="services" class="emergency-services">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                Essential <span class="gradient-text">Services</span>
+            </h2>
+            <div class="services-grid">
+                <div class="service-item" data-aos="zoom-in">
+                    <div class="service-icon women-safety">
+                        <i class="fas fa-female"></i>
+                    </div>
+                    <h3>Women Safety</h3>
+                    <p>Specialized features for women's safety and empowerment</p>
+                </div>
+
+                <div class="service-item" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="service-icon medical">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <h3>Medical Emergency</h3>
+                    <p>Connect with emergency medical services instantly</p>
+                </div>
+
+                <div class="service-item" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="service-icon accident">
+                        <i class="fas fa-car-crash"></i>
+                    </div>
+                    <h3>Accident Detection</h3>
+                    <p>Automatic detection and alert for accidents</p>
+                </div>
+
+                <div class="service-item" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="service-icon fire">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3>Fire & Disaster</h3>
+                    <p>Rapid response for fire and disaster situations</p>
+                </div>
+
+                <div class="service-item" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="service-icon police">
+                        <i class="fas fa-user-secret"></i>
+                    </div>
+                    <h3>Police Support</h3>
+                    <p>Quick coordination with local law enforcement</p>
+                </div>
+
+                <div class="service-item" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="service-icon rescue">
+                        <i class="fas fa-life-ring"></i>
+                    </div>
+                    <h3>Rescue Operations</h3>
+                    <p>Professional rescue team coordination and support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <h2 class="section-title">
+                        About <span class="gradient-text">SmartSensrty</span>
+                    </h2>
+                    <p>SmartSensrty is a revolutionary emergency response and safety management platform designed to protect lives through cutting-edge technology and real-time coordination.</p>
+                    <p>Our mission is to ensure that help is always just a tap away. With GPS tracking, instant alerts, and a volunteer network, we're building a safer world for everyone.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>50K+</h3>
+                            <p>Active Users</p>
+                        </div>
+                        <div class="stat">
+                            <h3>1000+</h3>
+                            <p>Lives Saved</p>
+                        </div>
+                        <div class="stat">
+                            <h3>24/7</h3>
+                            <p>Monitoring</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image" data-aos="fade-left">
+                    <div class="glassmorphism-card">
+                        <div class="trust-badge">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Verified & Trusted</span>
+                        </div>
+                        <div class="features-list">
+                            <div class="list-item">
+                                <i class="fas fa-check"></i> ISO Certified
+                            </div>
+                            <div class="list-item">
+                                <i class="fas fa-check"></i> End-to-End Encrypted
+                            </div>
+                            <div class="list-item">
+                                <i class="fas fa-check"></i> GDPR Compliant
+                            </div>
+                            <div class="list-item">
+                                <i class="fas fa-check"></i> 99.9% Uptime
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download">
+        <div class="container">
+            <div class="download-content" data-aos="zoom-in">
+                <h2 class="section-title">
+                    Ready to Stay <span class="gradient-text">Safe?</span>
+                </h2>
+                <p class="section-subtitle">Download SmartSensrty today and take control of your safety</p>
+                
+                <div class="download-info">
+                    <div class="info-item">
+                        <i class="fas fa-android"></i>
+                        <span>Android 8.0+</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-file-download"></i>
+                        <span>45 MB</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-star"></i>
+                        <span>4.8★ (2.3k reviews)</span>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary btn-large" id="primaryDownloadBtn">
+                    <i class="fas fa-download"></i> Download APK Now
+                </button>
+
+                <div class="alternative-downloads">
+                    <p>Alternative Download Methods:</p>
+                    <div class="download-methods">
+                        <a href="smartsensrty.apk" download="smartsensrty-v2.1.0.apk" class="download-link">
+                            <i class="fas fa-file"></i> Direct APK Download
+                        </a>
+                        <button class="download-link" onclick="copyDownloadLink()">
+                            <i class="fas fa-link"></i> Copy Download Link
+                        </button>
+                    </div>
+                </div>
+
+                <div class="version-info">
+                    <small>Version 2.1.0 • Updated: April 2026 • Size: 45MB</small>
+                </div>
+
+                <div class="installation-guide">
+                    <h4>Installation Guide:</h4>
+                    <ol>
+                        <li>Download the APK file</li>
+                        <li>Go to Settings → Security → Unknown Sources (Enable)</li>
+                        <li>Open the APK file from Downloads folder</li>
+                        <li>Click Install and complete the setup</li>
+                        <li>Launch SmartSensrty and register with your phone number</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Protection Section -->
+    <section id="protection" class="quick-protection">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                <span class="gradient-text">Quick Protection</span> Features
+            </h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                One-tap access to essential safety tools
+            </p>
+            <div class="protection-grid">
+                <div class="protection-card fake-call" data-aos="fade-up">
+                    <div class="protection-header orange">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Fake Call</h3>
+                    <p>Get a timely fake call to escape difficult situations</p>
+                    <ul class="features-list-mini">
+                        <li><i class="fas fa-check"></i> Instant activation</li>
+                        <li><i class="fas fa-check"></i> Caller ID customizable</li>
+                        <li><i class="fas fa-check"></i> Voice notification</li>
+                    </ul>
+                    <button class="btn btn-mini">Learn More</button>
+                </div>
+
+                <div class="protection-card silent-alarm" data-aos="fade-up" data-aos-delay="100">
+                    <div class="protection-header pink">
+                        <i class="fas fa-bell-slash"></i>
+                    </div>
+                    <h3>Silent Alarm</h3>
+                    <p>Alert contacts without drawing attention</p>
+                    <ul class="features-list-mini">
+                        <li><i class="fas fa-check"></i> Hidden activation</li>
+                        <li><i class="fas fa-check"></i> GPS location sent</li>
+                        <li><i class="fas fa-check"></i> No notification</li>
+                    </ul>
+                    <button class="btn btn-mini">Learn More</button>
+                </div>
+
+                <div class="protection-card shake-alert" data-aos="fade-up" data-aos-delay="200">
+                    <div class="protection-header purple">
+                        <i class="fas fa-earth-americas"></i>
+                    </div>
+                    <h3>Shake Detection</h3>
+                    <p>Automatic alert when severe movement detected</p>
+                    <ul class="features-list-mini">
+                        <li><i class="fas fa-check"></i> 24/7 monitoring</li>
+                        <li><i class="fas fa-check"></i> Smart detection</li>
+                        <li><i class="fas fa-check"></i> Instant notification</li>
+                    </ul>
+                    <button class="btn btn-mini">Learn More</button>
+                </div>
+
+                <div class="protection-card voice-alert" data-aos="fade-up" data-aos-delay="300">
+                    <div class="protection-header blue">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <h3>Voice Alert</h3>
+                    <p>Voice-activated emergency response system</p>
+                    <ul class="features-list-mini">
+                        <li><i class="fas fa-check"></i> Hands-free activation</li>
+                        <li><i class="fas fa-check"></i> Multi-language support</li>
+                        <li><i class="fas fa-check"></i> Instant response</li>
+                    </ul>
+                    <button class="btn btn-mini">Learn More</button>
+                </div>
+
+                <div class="protection-card sos-signal" data-aos="fade-up" data-aos-delay="200">
+                    <div class="protection-header orange">
+                        <i class="fas fa-triangle-exclamation"></i>
+                    </div>
+                    <h3>SOS Signal</h3>
+                    <p>One-tap emergency alert to all trusted contacts</p>
+                    <ul class="features-list-mini">
+                        <li><i class="fas fa-check"></i> Real-time location</li>
+                        <li><i class="fas fa-check"></i> Audio recording</li>
+                        <li><i class="fas fa-check"></i> Video alert option</li>
+                    </ul>
+                    <button class="btn btn-mini">Learn More</button>
+                </div>
+
+                <div class="protection-card safe-route" data-aos="fade-up" data-aos-delay="300">
+                    <div class="protection-header pink">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <h3>Safe Route</h3>
+                    <p>Get real-time guidance to safe locations</p>
+                    <ul class="features-list-mini">
+                        <li><i class="fas fa-check"></i> Live tracking</li>
+                        <li><i class="fas fa-check"></i> Safest routes</li>
+                        <li><i class="fas fa-check"></i> Police stations nearby</li>
+                    </ul>
+                    <button class="btn btn-mini">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- See SmartSensrty in Action Section -->
+    <section class="action-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                See <span class="gradient-text">SmartSensrty</span> in Action
+            </h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                Watch how SmartSensrty helps users stay safe in real-life scenarios
+            </p>
+            
+            <div class="action-grid" data-aos="zoom-in" data-aos-delay="200">
+                <div class="action-card">
+                    <div class="action-video">
+                        <img src="https://res.cloudinary.com/notes1/image/upload/WhatsApp_Image_2026-04-05_at_22.00.12_gwjcfv.jpg" alt="Live Demo">
+                        <button class="play-button">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <h3>Emergency Response in 2 Seconds</h3>
+                    <p>See how quickly your contacts are notified when you need help</p>
+                    <div class="action-stats">
+                        <span><i class="fas fa-bolt"></i> 2 Sec Response</span>
+                    </div>
+                </div>
+
+                <div class="action-card">
+                    <div class="action-video">
+                        <img src="https://res.cloudinary.com/notes1/image/upload/WhatsApp_Image_2026-04-05_at_22.00.12_gwjcfv.jpg" alt="GPS Tracking">
+                        <button class="play-button">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <h3>Live GPS Location Tracking</h3>
+                    <p>Real-time location sharing with trusted contacts</p>
+                    <div class="action-stats">
+                        <span><i class="fas fa-satellite"></i> GPS Precise</span>
+                    </div>
+                </div>
+
+                <div class="action-card">
+                    <div class="action-video">
+                        <img src="https://res.cloudinary.com/notes1/image/upload/WhatsApp_Image_2026-04-05_at_22.00.12_gwjcfv.jpg" alt="Safe Routing">
+                        <button class="play-button">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <h3>Navigate to Safety</h3>
+                    <p>Get guided directions to nearest police stations and safe zones</p>
+                    <div class="action-stats">
+                        <span><i class="fas fa-map"></i> Smart Routes</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-highlights" data-aos="fade-up">
+                <div class="highlight-item">
+                    <div class="highlight-icon">
+                        <i class="fas fa-users-shield"></i>
+                    </div>
+                    <h4>Trusted by 50K+ Users</h4>
+                    <p>Join our growing community of safety-conscious users</p>
+                </div>
+                <div class="highlight-item">
+                    <div class="highlight-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h4>1000+ Lives Protected</h4>
+                    <p>Real emergency situations handled successfully</p>
+                </div>
+                <div class="highlight-item">
+                    <div class="highlight-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h4>24/7 Alert System</h4>
+                    <p>Round-the-clock monitoring and response</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Powerful Safety Features Section -->
+    <section class="powerful-features">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                <span class="gradient-text">Powerful Safety</span> Features
+            </h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                Advanced technology built for your security
+            </p>
+
+            <div class="features-showcase" data-aos="zoom-in" data-aos-delay="200">
+                <div class="feature-showcase-item">
+                    <div class="feature-number">01</div>
+                    <h3>Smart Threat Detection</h3>
+                    <p>AI-powered algorithms detect potential threats in real-time and alert you instantly</p>
+                    <div class="feature-benefits">
+                        <span><i class="fas fa-check"></i> AI Detection</span>
+                        <span><i class="fas fa-check"></i> Real-time</span>
+                        <span><i class="fas fa-check"></i> Accurate</span>
+                    </div>
+                </div>
+
+                <div class="feature-showcase-item">
+                    <div class="feature-number">02</div>
+                    <h3>Encrypted Communication</h3>
+                    <p>Military-grade encryption ensures your safety data is completely secure</p>
+                    <div class="feature-benefits">
+                        <span><i class="fas fa-check"></i> 256-bit SSL</span>
+                        <span><i class="fas fa-check"></i> End-to-End</span>
+                        <span><i class="fas fa-check"></i> Verified</span>
+                    </div>
+                </div>
+
+                <div class="feature-showcase-item">
+                    <div class="feature-number">03</div>
+                    <h3>Multi-Layer Security</h3>
+                    <p>Multiple security protocols working together for maximum protection</p>
+                    <div class="feature-benefits">
+                        <span><i class="fas fa-check"></i> Biometric</span>
+                        <span><i class="fas fa-check"></i> PIN Lock</span>
+                        <span><i class="fas fa-check"></i> Face ID</span>
+                    </div>
+                </div>
+
+                <div class="feature-showcase-item">
+                    <div class="feature-number">04</div>
+                    <h3>Emergency Network</h3>
+                    <p>Connect with verified emergency responders and safety personnel instantly</p>
+                    <div class="feature-benefits">
+                        <span><i class="fas fa-check"></i> 24/7 Support</span>
+                        <span><i class="fas fa-check"></i> Verified</span>
+                        <span><i class="fas fa-check"></i> Professional</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="showcase-stats">
+                <div class="stat-showcase">
+                    <h3>100%</h3>
+                    <p>Uptime Guarantee</p>
+                </div>
+                <div class="stat-showcase">
+                    <h3>99.9%</h3>
+                    <p>Accuracy Rate</p>
+                </div>
+                <div class="stat-showcase">
+                    <h3>30+</h3>
+                    <p>Countries</p>
+                </div>
+                <div class="stat-showcase">
+                    <h3>2 Sec</h3>
+                    <p>Response Time</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Developer Profile Section -->
+    <section class="developer-section">
+        <div class="container">
+            <div class="developer-card" data-aos="zoom-in">
+                <div class="developer-content">
+                    <div class="developer-image">
+                        <img src="https://res.cloudinary.com/notes1/image/upload/WhatsApp_Image_2026-02-07_at_21.52.36_vm8roo.jpg" alt="Developer Srinath">
+                        <div class="developer-badge">
+                            <i class="fas fa-star"></i> Creator
+                        </div>
+                    </div>
+                    <div class="developer-info">
+                        <h3>Developed by <span class="gradient-text">Srinath</span></h3>
+                        <p class="developer-title">Full-Stack Developer & Safety Innovator</p>
+                        <p class="developer-bio">Passionate about creating innovative safety solutions that empower people to protect themselves. SmartSensrty is built with dedication to make everyone feel secure.</p>
+                        
+                        <div class="developer-stats">
+                            <div class="dev-stat">
+                                <span class="stat-number">2024</span>
+                                <span class="stat-label">Founded</span>
+                            </div>
+                            <div class="dev-stat">
+                                <span class="stat-number">50K+</span>
+                                <span class="stat-label">Users</span>
+                            </div>
+                            <div class="dev-stat">
+                                <span class="stat-number">4.8★</span>
+                                <span class="stat-label">Rating</span>
+                            </div>
+                        </div>
+
+                        <div class="developer-share">
+                            <h4>Share SmartSensrty:</h4>
+                            <div class="share-buttons">
+                                <button class="share-btn whatsapp" onclick="shareOnWhatsApp()">
+                                    <i class="fab fa-whatsapp"></i> WhatsApp
+                                </button>
+                                <button class="share-btn twitter" onclick="shareOnTwitter()">
+                                    <i class="fab fa-twitter"></i> Twitter
+                                </button>
+                                <button class="share-btn facebook" onclick="shareOnFacebook()">
+                                    <i class="fab fa-facebook"></i> Facebook
+                                </button>
+                                <button class="share-btn link" onclick="copyShareLink()">
+                                    <i class="fas fa-link"></i> Copy Link
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SmartSensrty</h3>
+                    <p>Your safety is our mission. Available 24/7 for emergency support.</p>
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#download">Download</a></li>
+                        <li><a href="#about">About Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> Emergency: 112</li>
+                        <li><i class="fas fa-envelope"></i> support@smartsensrty.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Global Operations</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 SmartSensrty. All rights reserved. | Disclaimer: In life-threatening situations, always contact emergency services (911/112)</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Animation -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="spinner"></div>
+            <p>SmartSensrty</p>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+    <script src="share-functions.js"></script>
+</body>
+</html>
